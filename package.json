@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "clasp push",
+    "deploy:stg": "sh ./scripts/deploy.sh stg",
+    "deploy:prod": "sh ./scripts/deploy.sh prod",
     "clear": "npm run clear:sub && npm run clear:src",
     "clear:sub": "find slackQuestionGenerator -type f -name '*.js' -or -name '*.d.ts' | xargs rm",
     "clear:src": "find src -type f -name '*.js' -or -name '*.d.ts' | xargs rm"

@@ -1,7 +1,17 @@
 {
   "scriptId": "1eu4IN9GpsvKHOOxTv456euFPh48EXmP6RU_Bs2v1St1ZiFsOvjUYjIPm",
-  "rootDir": "/Users/pc332/projects/others/gas/operation",
+  "rootDir":"./dist",
+  "fileExtension": "ts",
   "filePushOrder": [
-    "src/config/secretConfig.ts",
+    "dist/config/secretConfig.ts",
+    "dist/config/index.ts",
+    "dist/slackQuestionGenerator/src/domain/slackPostQuestionService/index.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/datepicker.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/index.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/models.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/numberInput.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/plainTetInput.ts",
+    "dist/slackQuestionGenerator/src/domain/slackQuestionBlockGenerator/staticSelect.ts",
+    "dist/slackQuestionGenerator/src/usecase/slackQuestionController/index.ts"
   ]
 }
