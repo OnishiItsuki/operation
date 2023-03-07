@@ -1,0 +1,15 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "SlackQuestionGenerator",
+        "version": "0",
+        "libraryId": "1j22bYsE9ajFGvVqzWxzwj4jE9oe-iME_geRYb6hKyTsJDM2ZN1JPGBgE",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}

@@ -1,0 +1,7 @@
+{
+  "scriptId": "1eu4IN9GpsvKHOOxTv456euFPh48EXmP6RU_Bs2v1St1ZiFsOvjUYjIPm",
+  "rootDir": "/Users/pc332/projects/others/gas/operation",
+  "filePushOrder": [
+    "src/config/secretConfig.ts",
+  ]
+}

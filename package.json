@@ -1,0 +1,22 @@
+{
+  "name": "operation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "clasp push",
+    "clear": "npm run clear:sub && npm run clear:src",
+    "clear:sub": "find slackQuestionGenerator -type f -name '*.js' -or -name '*.d.ts' | xargs rm",
+    "clear:src": "find src -type f -name '*.js' -or -name '*.d.ts' | xargs rm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.57",
+    "dotenv": "^16.0.3",
+    "yarn": "^1.22.19"
+  }
+}
