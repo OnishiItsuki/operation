@@ -4,6 +4,7 @@ title: "v リリーステスト"
 body:
   - type: textarea
     id: template
+    label:
     attributes:
       description: 案件の一覧等を入力して送信してください（送信後でも編集できます）
       value: "
