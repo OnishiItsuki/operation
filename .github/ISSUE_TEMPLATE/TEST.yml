@@ -1,65 +1,70 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+name: Release Test
+description: Issue template for release test
+title: "v リリーステスト"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
-    id: what-happened
+    id: template
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
+      label: template
+      description: 案件の一覧等を入力して送信してください（送信後でも編集できます）
       placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      value: "
+## 各案件状況
+Merged for master: 🟣
+Test pass: 🟢
+Test fail or require update or require review: 🔴
+Conflict: 🟤
 
+### AIRCLOSET-XXXXX 案件名
+
+## リリテス用ブランチ
+CI pass: 🟢
+CI fail: 🔴
+
+🟢 https://github.com/air-closet/air-closet/pull/
+
+マージコミットを確認したいときは `git log --oneline --first-parent master` が便利。
+
+## テスト進捗
+
+開始：
+終了予定：
+
+## TODO
+1. テスト作成（テスト開始の2W前までに提出）
+    - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
+    - [ ] AIRCLOSET-53463 チャネルトーク再開
+2. アプリ以外のProdリリース
+    - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
+    - [ ] AIRCLOSET-53463 チャネルトーク再開
+3. 回帰テスト準備
+    - [ ] アプリ配布リンクを作成する（AppVersion毎にリンク作成）
+    - [ ] ハイテク側にDeployGateリンクを渡す
+      - [ ] iOS
+      - [ ] Android
+    - [ ] STGリリース
+      - [ ] API
+      - [ ] Migration
+    - [ ] [本番環境の画像をStg環境にコピー](https://air-closet.esa.io/posts/182)
+4. 審査出し
+    - [ ] Store画像を全端末分確認
+    - [ ] AppVersionUp
+    - [ ] CodePush用VersionUp
+    - [ ] タグを切る
+    - [ ] リリース審査出す時に、前回のアプリ担当者と一緒にやりますか？
+    - [ ] 審査に出す
+      - [ ] ios
+      - [ ] android
+6. 社内検証・QA対応
+    - [ ] 社内検証実施
+      - [ ] [TestRail](https://aircloset.testrail.io/index.php?/runs/view/1185&group_by=cases:section_id&group_order=asc)
+    - [ ] 日次QA対応
+    - [ ] 不具合対応
+    - [ ] 回帰テストの誤りを修正する
+7. アプリリリース
+    - [ ] CTO確認
+    - [ ] 最終確認
+    - [ ] リリース
+"
+    validations:
+      required: true
