@@ -61,17 +61,9 @@ CI fail: 🔴
 
   - [ ] アプリ配布リンクを作成する（AppVersion毎にリンク作成）
 
-  - [ ] ハイテク側にDeployGateリンクを渡す
+  - [ ] ハイテク側にDeployGateリンクを渡す (iOS, Android)
 
-    - [ ] iOS
-
-    - [ ] Android
-
-  - [ ] STGリリース
-
-    - [ ] API
-
-    - [ ] Migration
+  - [ ] STGリリース (API, Migration)
 
   - [ ] [本番環境の画像をStg環境にコピー](https://air-closet.esa.io/posts/182)
 
@@ -87,17 +79,11 @@ CI fail: 🔴
 
   - [ ] リリース審査出す時に、前回のアプリ担当者と一緒にやりますか？
 
-  - [ ] 審査に出す
-
-    - [ ] ios
-
-    - [ ] android
+  - [ ] 審査に出す (Android, iOS)
 
 6. 社内検証・QA対応
 
-  - [ ] 社内検証実施
-
-    - [ ] [TestRail](https://aircloset.testrail.io/index.php?/runs/view/1185&group_by=cases:section_id&group_order=asc)
+  - [ ] 社内検証実施 [TestRail](https://aircloset.testrail.io/index.php?/runs/view/1185&group_by=cases:section_id&group_order=asc)
 
   - [ ] 日次QA対応
 
