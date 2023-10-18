@@ -20,9 +20,7 @@ Test fail or require update or require review: 🔴
 Conflict: 🟤
 
 
-
 ### AIRCLOSET-XXXXX 案件名
-
 
 
 ## リリテス用ブランチ
@@ -32,23 +30,18 @@ CI pass: 🟢
 CI fail: 🔴
 
 
-
 🟢 https://github.com/air-closet/air-closet/pull/
-
 
 
 マージコミットを確認したいときは `git log --oneline --first-parent master` が便利。
 
 
-
 ## テスト進捗
-
 
 
 開始：
 
 終了予定：
-
 
 
 ## TODO
