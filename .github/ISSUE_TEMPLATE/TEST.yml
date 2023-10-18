@@ -48,72 +48,71 @@ CI fail: 🔴
 
 1. テスト作成（テスト開始の2W前までに提出）
 
-    - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
+  - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
 
-    - [ ] AIRCLOSET-53463 チャネルトーク再開
+  - [ ] AIRCLOSET-53463 チャネルトーク再開
 
 2. アプリ以外のProdリリース
 
-    - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
+  - [ ] AIRCLOSET-47727 サービス側からみんなのコーデ画像を投稿する機能
 
-    - [ ] AIRCLOSET-53463 チャネルトーク再開
+  - [ ] AIRCLOSET-53463 チャネルトーク再開
 
 3. 回帰テスト準備
 
-    - [ ] アプリ配布リンクを作成する（AppVersion毎にリンク作成）
+  - [ ] アプリ配布リンクを作成する（AppVersion毎にリンク作成）
 
-    - [ ] ハイテク側にDeployGateリンクを渡す
+  - [ ] ハイテク側にDeployGateリンクを渡す
 
-      - [ ] iOS
+    - [ ] iOS
 
-      - [ ] Android
+    - [ ] Android
 
-    - [ ] STGリリース
+  - [ ] STGリリース
 
-      - [ ] API
+    - [ ] API
 
-      - [ ] Migration
+    - [ ] Migration
 
-    - [ ] [本番環境の画像をStg環境にコピー](https://air-closet.esa.io/posts/182)
+  - [ ] [本番環境の画像をStg環境にコピー](https://air-closet.esa.io/posts/182)
 
 4. 審査出し
 
-    - [ ] Store画像を全端末分確認
+  - [ ] Store画像を全端末分確認
 
-    - [ ] AppVersionUp
+  - [ ] AppVersionUp
 
-    - [ ] CodePush用VersionUp
+  - [ ] CodePush用VersionUp
 
-    - [ ] タグを切る
+  - [ ] タグを切る
 
-    - [ ] リリース審査出す時に、前回のアプリ担当者と一緒にやりますか？
+  - [ ] リリース審査出す時に、前回のアプリ担当者と一緒にやりますか？
 
-    - [ ] 審査に出す
+  - [ ] 審査に出す
 
-      - [ ] ios
+    - [ ] ios
 
-      - [ ] android
+    - [ ] android
 
 6. 社内検証・QA対応
 
-    - [ ] 社内検証実施
+  - [ ] 社内検証実施
 
-      - [ ] [TestRail](https://aircloset.testrail.io/index.php?/runs/view/1185&group_by=cases:section_id&group_order=asc)
+    - [ ] [TestRail](https://aircloset.testrail.io/index.php?/runs/view/1185&group_by=cases:section_id&group_order=asc)
 
-    - [ ] 日次QA対応
+  - [ ] 日次QA対応
 
-    - [ ] 不具合対応
+  - [ ] 不具合対応
 
-    - [ ] 回帰テストの誤りを修正する
+  - [ ] 回帰テストの誤りを修正する
 
 7. アプリリリース
 
-    - [ ] CTO確認
+  - [ ] CTO確認
 
-    - [ ] 最終確認
+  - [ ] 最終確認
 
-    - [ ] リリース
-
+  - [ ] リリース
 "
     validations:
       required: true
