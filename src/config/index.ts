@@ -5,7 +5,7 @@ import {
   SLACK_CHANNEL,
 } from "./secretConfig";
 
-export const config = {
+const config = {
   SLACK_SIGNING_SECRET: SLACK_SIGNING_SECRET || "",
   SLACK_ACCESS_TOKEN: SLACK_ACCESS_TOKEN || "",
   SLACK_TOKEN: SLACK_TOKEN || "",
@@ -18,3 +18,5 @@ export const config = {
     ACM: "【aC MALL】OP対応依頼",
   },
 };
+
+export { config };
