@@ -19,10 +19,10 @@ if [ ! $ENV = prod ] && [ ! $ENV = stg ]; then
   exit 1
 fi
 
-if [ $ENV = prod ] && [ -z "$DEPLOY_DESCRIPTION" ]; then
-  echo '> エラー: prodを指定した場合はデプロイの説明を指定してください。'
-  exit 1
-fi
+# if [ $ENV = prod ] && [ -z "$DEPLOY_DESCRIPTION" ]; then
+#   echo '> エラー: prodを指定した場合はデプロイの説明を指定してください。'
+#   exit 1
+# fi
 
 # ファイル存在チェック
 if [ ! -e $CLASP_JSON_PATH ]; then
@@ -47,16 +47,16 @@ if [ $ENV = prod ]; then
   echo "> メッセージ: $DEPLOY_DESCRIPTION"
 fi
 printf '\n'
-read -p "> 実行してよろしいですか？ (y/n) [n] : " answer
-case $answer in
-  [Yy] ) break;;
-  [Nn] ) printf "処理を中断します。\n"
-    exit 1;;
-  "" ) printf "処理を中断します。\n"
-    exit 1;;
-  * ) printf "(y/n) で入力してください。\n"
-    exit 1;;
-esac
+# read -p "> 実行してよろしいですか？ (y/n) [n] : " answer
+# case $answer in
+#   [Yy] ) break;;
+#   [Nn] ) printf "処理を中断します。\n"
+#     exit 1;;
+#   "" ) printf "処理を中断します。\n"
+#     exit 1;;
+#   * ) printf "(y/n) で入力してください。\n"
+#     exit 1;;
+# esac
 
 sed -i "" -e "s/$ORIGIN_SCRIPT_ID/$SCRIPT_ID/g" $CLASP_JSON_PATH
 mkdir ./dist
@@ -67,7 +67,14 @@ cp appsscript.json ./dist
 npx clasp push
 
 if [ $ENV = prod ]; then
-  npx clasp deploy --description $DEPLOY_DESCRIPTION
+  # get last deployment id
+  LAST_DEPLOYMENT_ID=$(npx clasp deployments | grep -e '-[A-Za-z0-9\-\_\ ]\+ @[0-9]\+ - web app meta-version' | awk -F ' ' '{print $2}')
+
+  if [ -z "$LAST_DEPLOYMENT_ID" ]; then
+    LAST_DEPLOYMENT_ID=$(npx clasp deployments | grep -e '-[A-Za-z0-9\-\_\ ]\+ @[0-9]\+' | tail -n 1 | awk -F ' ' '{print $2}')
+  fi
+
+  npx clasp deploy -i "$LAST_DEPLOYMENT_ID"
 fi
 
 rm -rf ./dist
